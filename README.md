@@ -1,27 +1,34 @@
-# OnBoarding
+# Sprint 5 IT Academy | Onboarding digital
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+## Introduction
+El objetivo de este proyecto es crear un componente que muestre diferentes pasos (steps) como tarjetas (cards) y permita la navegación entre ellas con animaciones suaves.
 
-## Development server
+## Estructura del Proyecto
+Componentes
+EscenaComponent: Este es el componente principal que gestiona la visualización y la animación de las tarjetas.
+Animaciones
+Utilizamos Angular Animations para crear transiciones suaves entre las tarjetas. La animación fade controla la opacidad de entrada y salida de las tarjetas.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## CSS
+Se incluyen estilos específicos para asegurar que las tarjetas y su contenido se mantengan dentro de los límites esperados, evitando el desbordamiento y la expansión no deseada.
 
-## Code scaffolding
+## Requisitos Previos
+Node.js
+Angular CLI
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instrucciones
+1. Clona el repositorio:
+```bash
+git clone https://github.com/tu-usuario/proyecto-angular-tarjetas.git
+cd proyecto-angular-tarjetas
+```
 
-## Build
+2. Instala las dependencias:
+```bash
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+3. Ejecuta el proyecto
+```bash
+ng serve -o
+```
