@@ -8,31 +8,30 @@
 .card {
   position: relative;
   width: 20rem;
-  height: 48rem;
+  height: 46rem;
   margin-bottom: 10px;
   border-radius: 35px; 
   overflow: hidden;
 }
 
 .card-head {
-  height: 900px;
+  padding-bottom: 70px;
+  padding-top: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .card img {
-  width: 100%; 
+  width: 90%; 
   height: auto;
-  display: block; 
-  margin-bottom: 70px;
+  display: block;
 }
 
-
 .card-body {
-  display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 350px;
   padding: 7px;
   background-color: #ffffff;
   border-top: 0;
@@ -61,13 +60,14 @@
   padding: 10px;
   background-color: #fff;
   border-top: 0;
-  height: 200px;
+  padding-bottom: 50px;
 }
 
 .indicators {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  padding: 15px;
 }
 
 .indicator {
@@ -83,6 +83,10 @@
   background-color:  #272323;
   width: 30px;
   border-radius: 20px;
+}
+
+button[disabled] {
+  display: none;
 }
 
 .btn {

@@ -3,27 +3,20 @@ import { IStep } from '../istep';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from '../home/home.component';
 import { trigger, transition, query, style, animate, group } from '@angular/animations';
+
 const left = [
-  query(':enter, :leave', style({ position: 'fixed', width: '100%' }), { optional: true }),
+  query(':enter, :leave', style({ position: 'fixed', width: '100%', opacity: 0 }), { optional: true }),
   group([
-    query(':enter', [style({ transform: 'translateX(-100%)' }), animate('.3s ease-out', style({ transform: 'translateX(0%)' }))], {
-      optional: true,
-    }),
-    query(':leave', [style({ transform: 'translateX(0%)' }), animate('.3s ease-out', style({ transform: 'translateX(100%)' }))], {
-      optional: true,
-    }),
+    query(':enter', [style({ opacity: 0 }), animate('0.5s ease-in', style({ opacity: 1 }))], { optional: true }),
+    query(':leave', [style({ opacity: 1 }), animate('0.5s ease-out', style({ opacity: 0 }))], { optional: true }),
   ]),
 ];
 
 const right = [
-  query(':enter, :leave', style({ position: 'fixed', width: '100%' }), { optional: true }),
+  query(':enter, :leave', style({ position: 'fixed', width: '100%', opacity: 0 }), { optional: true }),
   group([
-    query(':enter', [style({ transform: 'translateX(100%)' }), animate('.3s ease-out', style({ transform: 'translateX(0%)' }))], {
-      optional: true,
-    }),
-    query(':leave', [style({ transform: 'translateX(0%)' }), animate('.3s ease-out', style({ transform: 'translateX(-100%)' }))], {
-      optional: true,
-    }),
+    query(':enter', [style({ opacity: 0 }), animate('0.5s ease-in', style({ opacity: 1 }))], { optional: true }),
+    query(':leave', [style({ opacity: 1 }), animate('0.5s ease-out', style({ opacity: 0 }))], { optional: true }),
   ]),
 ];
 
