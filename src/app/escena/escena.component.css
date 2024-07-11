@@ -83,7 +83,7 @@
 }
 
 .indicator.active {
-  background-color:  #272323;
+  background-color:  #000000;
   width: 30px;
   border-radius: 20px;
 }
@@ -93,10 +93,21 @@ button[disabled] {
 }
 
 .btn {
-  background-color: #272323;
   border-color: #272323;
   border: 0px;
   padding: 20px;
+}
+
+.white-btn {
+  background-color: white;
+  color: #272323;
+  border: 2px solid #272323;
+}
+
+.black-btn {
+  background-color: #272323;
+  color: white;
+  border: none;
 }
 
 .controls {

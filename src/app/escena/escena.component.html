@@ -1,7 +1,7 @@
 <div class="container" [@animImageSlider]="currentStep">
   @for (step of steps; track $index) {
       @if ($index === currentStep) {
-          <div class="card" style="position: relative;">
+          <div class="card">
               <div class="card-head" [style.background-color]="steps[currentStep].bgcolor">
                   <img [src]="steps[currentStep].img" class="card-img-top" alt="...">
               </div>
@@ -19,14 +19,15 @@
                   </div>
 
                   <div class="controls">
-                      <button (click)="prevStep()" [disabled]="currentStep === 0" class="btn btn-secondary btn-lg px-4 rounded-pill" type="button">
-                          <i class="bi bi-arrow-left"></i>
-                      </button>
-
-                      <button (click)="nextStep()" [disabled]="currentStep === steps.length - 1" class="btn btn-secondary btn-lg px-4 rounded-pill" type="button">
-                          <i class="bi bi-arrow-right"></i>
-                      </button>
-                  </div>  
+                    <button (click)="prevStep()" [disabled]="currentStep === 0" class="btn btn-secondary btn-lg px-4 rounded-pill white-btn" type="button">
+                      <i class="bi bi-arrow-left"></i>
+                    </button>
+                  
+                    <button (click)="nextStep()" [disabled]="currentStep === steps.length - 1" class="btn btn-secondary btn-lg px-4 rounded-pill black-btn" type="button">
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </div>
+                  
               </div>
           </div>
       }
