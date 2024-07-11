@@ -1,7 +1,7 @@
 # Sprint 5 IT Academy | Onboarding digital
 
 ## Introduction
-El objetivo de este proyecto es crear un componente que muestre diferentes pasos (steps) como tarjetas (cards) y permita la navegación entre ellas con animaciones suaves. Se abordan problemas como el desbordamiento del contenido y la expansión de imágenes al tamaño completo de la pantalla durante las transiciones.
+El objetivo de este proyecto es crear un componente que muestre diferentes pasos (steps) como tarjetas (cards) y permita la navegación entre ellas con animaciones suaves.
 
 ## Estructura del Proyecto
 Componentes
