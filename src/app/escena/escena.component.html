@@ -1,0 +1,33 @@
+<div class="container" >
+  <div [@animSlider]="currentStep">
+
+    @for (step of steps; track $index) {
+      @if ($index === currentStep) {
+        <div class="card">
+          <div class="card-head" [style.background-color]="steps[currentStep].bgcolor">
+            <img [src]="steps[currentStep].img" class="card-img-top" alt="{{ steps[currentStep].title }}">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">{{ step.title }}</h3>
+            <p class="card-text">{{ step.description }}</p>
+          </div>
+          <div class="card-foot">
+            <div class="indicators">
+              @for (step of steps; track $index) {
+                <span [class.active]="$index === currentStep" class="indicator" (click)="goToStep($index)"></span>
+              }
+            </div>
+            <div class="controls">
+              <button (click)="prevStep()" [disabled]="currentStep === 0 ? 'disabled' : ''" class="btn btn-secondary btn-lg px-4 rounded-pill" type="button">
+                <i class="bi bi-arrow-left"></i>
+              </button>
+              <button (click)="nextStep()" [disabled]="currentStep === steps.length - 1  ? 'disabled' : ''" class="btn btn-secondary btn-lg px-4 rounded-pill" type="button">
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>  
+          </div>
+        </div>
+      }
+    }
+  </div>
+</div>

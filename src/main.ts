@@ -1,6 +1,19 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
+import { provideRouter, Routes } from '@angular/router';
 import { AppComponent } from './app/app.component';
+import { importProvidersFrom } from '@angular/core';
+import { StepsService } from './app/steps.service';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+const routes: Routes = [
+  { path: '', component: AppComponent }
+];
+
+bootstrapApplication(AppComponent, {
+  providers: [
+    importProvidersFrom([]),
+    provideAnimations(),
+    provideRouter(routes),
+    StepsService
+  ]
+});
