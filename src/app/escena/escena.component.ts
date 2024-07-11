@@ -5,7 +5,7 @@ import { HomeComponent } from '../home/home.component';
 import { trigger, transition, query, style, animate, group } from '@angular/animations';
 
 const left = [
-  query(':enter, :leave', style({ position: 'fixed', width: '100%', opacity: 0 }), { optional: true }),
+  query(':enter, :leave', style({ position: 'absolute', width: '100%', opacity: 0 }), { optional: true }),
   group([
     query(':enter', [style({ opacity: 0 }), animate('0.5s ease-in', style({ opacity: 1 }))], { optional: true }),
     query(':leave', [style({ opacity: 1 }), animate('0.5s ease-out', style({ opacity: 0 }))], { optional: true }),
@@ -13,7 +13,7 @@ const left = [
 ];
 
 const right = [
-  query(':enter, :leave', style({ position: 'fixed', width: '100%', opacity: 0 }), { optional: true }),
+  query(':enter, :leave', style({ position: 'absolute', width: '100%', opacity: 0 }), { optional: true }),
   group([
     query(':enter', [style({ opacity: 0 }), animate('0.5s ease-in', style({ opacity: 1 }))], { optional: true }),
     query(':leave', [style({ opacity: 1 }), animate('0.5s ease-out', style({ opacity: 0 }))], { optional: true }),
@@ -27,7 +27,7 @@ const right = [
   templateUrl: './escena.component.html',
   styleUrls: ['./escena.component.scss'],
   animations: [
-    trigger('animSlider', [
+    trigger('animImageSlider', [
       transition(':increment', right),
       transition(':decrement', left),
     ]),
@@ -36,7 +36,8 @@ const right = [
 
 export class EscenaComponent {
   @Input() steps: IStep[] = [];
-  @Input() currentStep: number = 0;
+  
+  currentStep: number = 0;
 
   prevStep() {
     if (this.currentStep > 0) {

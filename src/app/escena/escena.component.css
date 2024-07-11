@@ -7,20 +7,20 @@
 
 .card {
   position: relative;
+  overflow: hidden;
   width: 20rem;
   height: 46rem;
   margin-bottom: 10px;
   border-radius: 35px; 
-  overflow: hidden;
 }
 
 .card-head {
-  padding-bottom: 70px;
-  padding-top: 90px;
+  padding-bottom: 32%;
+  padding-top: 32%;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  position: relative;
 }
 
 .card img {
@@ -30,8 +30,9 @@
 }
 
 .card-body {
+  position: relative;
   flex-direction: column;
-  height: 350px;
+  height: 300px;
   padding: 7px;
   background-color: #ffffff;
   border-top: 0;
@@ -43,6 +44,7 @@
   font-size: 20px;
   padding: 15px;
   padding-bottom: 0;
+  padding-top: 20px;
 }
 
 .card-text {
@@ -54,6 +56,7 @@
 }
 
 .card-foot {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
